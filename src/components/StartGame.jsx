@@ -1,12 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 import { Button, Typography } from '@mui/material';
 
 const StartGame = () => {
+    const navigate = useNavigate();
 
-    const Log = () => {
-        console.log('test!!!');
-    }
     return(
         <div className='start'>
           <Typography variant="h1" color="red">Игра</Typography>
@@ -20,7 +19,7 @@ const StartGame = () => {
           <Typography variant="subtitle1" color="#ff4081" sx={{ fontSize: '1.5rem'}}>
             "D" - вправо
           </Typography>
-          <Button variant="contained" onClick={Log} sx={{ fontSize: '2rem', padding: '10px', marginTop: '30px'}}>Играть</Button>
+          <Button variant="contained" onClick={() => navigate('game', { replace: false })} sx={{ fontSize: '2rem', padding: '10px', marginTop: '30px'}}>Играть</Button>
         </div>
     )
 }

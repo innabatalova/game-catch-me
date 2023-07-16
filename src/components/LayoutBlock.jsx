@@ -1,11 +1,17 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import GameDisplay from './GameDisplay'
 import StartGame from './StartGame'
+import GameDisplay from './GameDisplay'
 
 const LayoutBlock = () => {
     return(
-      <StartGame/>
+        <BrowserRouter>
+            <Routes>
+                <Route path="*" element={<StartGame />} />
+                <Route path="game" element={<GameDisplay />} />
+            </Routes>
+      </BrowserRouter>
     )
 }
 
