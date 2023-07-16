@@ -11,6 +11,10 @@
     overflow: hidden;
 }
 
+.game{
+    text-align: center;
+}
+
 .tube{
     position: absolute;
 
@@ -108,4 +112,8 @@
         top: 0;
         left: 80px;
     }
+}
+
+.start{
+    text-align: center;
 }
