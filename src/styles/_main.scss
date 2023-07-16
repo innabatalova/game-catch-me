@@ -88,3 +88,24 @@
     left: 70%;
     transform: rotate(315deg);
 }
+
+.men{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 260px;
+    height: 270px;
+
+    &__body{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &__face{
+        position: absolute;
+        top: 0;
+        left: 80px;
+    }
+}
