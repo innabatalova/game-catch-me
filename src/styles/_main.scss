@@ -1,0 +1,90 @@
+#root {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-image: url(../static/image/main-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.tube{
+    position: absolute;
+
+    &__top-left{
+        top: 10%;
+        left: 0;
+    }
+
+    &__bottom-left{
+        top: 30%;
+        left: -5%;
+    }
+
+    &__top-right{
+        top: 10%;
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    &__bottom-right{
+        top: 30%;
+        right: -5%;
+        transform: rotate(180deg);
+    }
+}
+
+.dick{
+    position: absolute;
+}
+
+.dick1{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+.dick2{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: rotate(45deg);
+}
+
+.dick3{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    transform: rotate(90deg);
+}
+
+.dick4{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: rotate(135deg);
+}
+
+.dick5{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: rotate(225deg);
+}
+
+.dick6{
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: rotate(270deg);
+}
+
+.dick7{
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    transform: rotate(315deg);
+}
