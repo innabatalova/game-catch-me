@@ -1,19 +1,10 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 
 import { Button, Typography } from '@mui/material';
-import Game from '../controllers/game'
 
 const GameOver = () => {
-    const navigate = useNavigate();
-
-    const test = (e) => {
-        Game.stepLeft(e.target)
-    }
-
     return(
         <div className="over">
-            <Button variant="contained" onClick={test} sx={{ fontSize: '2rem', padding: '10px', position: 'absolute' }}>test</Button>
             <Typography variant="h1" color="red">Game over...</Typography>
             <Typography variant="h2" color="white">Славно напихали Владлену!</Typography>
             <Typography variant="subtitle1" color="white" sx={{ fontSize: '1.5rem', marginTop: '50px' }}>

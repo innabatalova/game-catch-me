@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Typography } from '@mui/material';
 
@@ -7,7 +7,24 @@ import MenDefault from './MenDefault'
 
 import DickImg from '../static/image/dick.png'
 
+import Game from '../controllers/game'
+
 const GameDisplay = () => {
+    useEffect(() => {
+        const onKeypress = (e) => {
+            if (e.keyCode == 97){
+                Game.stepLeft()
+            }
+            if (e.keyCode == 100) {
+                Game.stepRight()
+            }
+        }
+        document.addEventListener('keypress', onKeypress);
+        return () => {
+            document.removeEventListener('keypress', onKeypress);
+        };
+    }, []);
+
     return(
         <div className='game'>
             <Typography variant="h4" color="white" sx={{ textTransform: 'uppercase'}}>Счет:</Typography>

@@ -5,7 +5,7 @@ import FaceImg from '../static/image/vladlen.png'
 
 const MenDefault = () => {
     return(
-        <div className="men">
+        <div className="men" >
             <img className='men__body' src={MenImg} alt="vladlen" />
             <img className='men__face' src={FaceImg} alt="vladlen" />
         </div>

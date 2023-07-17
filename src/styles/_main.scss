@@ -12,6 +12,7 @@
 }
 
 .game{
+    height: 100%;
     text-align: center;
 }
 
@@ -97,7 +98,7 @@
     position: absolute;
     bottom: 0;
     left: 40%;
-    width: 260px;
+    width: 160px;
     height: 270px;
 
     &__body{
@@ -110,7 +111,7 @@
     &__face{
         position: absolute;
         top: 0;
-        left: 80px;
+        left: 32px;
     }
 }
 
