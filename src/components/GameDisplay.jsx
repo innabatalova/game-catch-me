@@ -5,12 +5,19 @@ import { Typography } from '@mui/material';
 import Tube from './Tube'
 import MenDefault from './MenDefault'
 
-import DickImg from '../static/image/dick.png'
+import game from '../controllers/game'
+
+setInterval(()=> {
+    game.addArrayImg()
+    setTimeout(()=> {
+        game.removeArrayImg()
+    }, 4990)
+}, 5000)
+clearInterval()
 
 const GameDisplay = () => {
 
     const [coord, setCoord] = useState('40%')
-
     useEffect(() => {
         const onKeypress = (e) => {
             if (e.keyCode == 97) {
@@ -31,7 +38,7 @@ const GameDisplay = () => {
         return () => {
             document.removeEventListener('keypress', onKeypress);
         };
-    });
+    }); 
 
     return (
         <div className='game'>
@@ -41,7 +48,6 @@ const GameDisplay = () => {
             <Tube classTubeProps='top-right' />
             <Tube classTubeProps='bottom-left' />
             <Tube classTubeProps='bottom-right' />
-            <img className='dick' src={DickImg} />
             <MenDefault move={coord} />
         </div>
     )

@@ -46,7 +46,19 @@
     position: absolute;
 }
 
-img.dick {
+img.dick__topLeft {
+    animation: 5s linear 0s normal none infinite running topLeftOut;
+}
+
+img.dick__topRight {
+    animation: 5s linear 0s normal none infinite running topRightOut;
+}
+
+img.dick__bottomLeft {
+    animation: 5s linear 0s normal none infinite running bottomLeftOut;
+}
+
+img.dick__bottomRight {
     animation: 5s linear 0s normal none infinite running bottomRightOut;
 }
 
