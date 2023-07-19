@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Typography } from '@mui/material';
 
@@ -7,40 +7,42 @@ import MenDefault from './MenDefault'
 
 import DickImg from '../static/image/dick.png'
 
-import Game from '../controllers/game'
-
 const GameDisplay = () => {
+
+    const [coord, setCoord] = useState('40%')
+
     useEffect(() => {
         const onKeypress = (e) => {
-            if (e.keyCode == 97){
-                Game.stepLeft()
+            if (e.keyCode == 97) {
+                let newCoord = (coord.slice(0, -1) - 1) + '%'
+                if (newCoord <= '15%') {
+                    setCoord('15%')
+                } else { setCoord(newCoord) }
             }
             if (e.keyCode == 100) {
-                Game.stepRight()
+                let newCoord = (parseInt(coord.slice(0, -1)) + 1) + '%'
+                setCoord(newCoord)
+                if (newCoord >= '75%') {
+                    setCoord('75%')
+                } else { setCoord(newCoord) }
             }
         }
         document.addEventListener('keypress', onKeypress);
         return () => {
             document.removeEventListener('keypress', onKeypress);
         };
-    }, []);
+    });
 
-    return(
+    return (
         <div className='game'>
-            <Typography variant="h4" color="white" sx={{ textTransform: 'uppercase'}}>Счет:</Typography>
+            <Typography variant="h4" color="white" sx={{ textTransform: 'uppercase' }}>Счет:</Typography>
             <Typography variant="subtitle1" color="red" sx={{ fontSize: '1.5rem' }}>0000</Typography>
             <Tube classTubeProps='top-left' />
             <Tube classTubeProps='top-right' />
             <Tube classTubeProps='bottom-left' />
             <Tube classTubeProps='bottom-right' />
-            <img className='dick dick1' src={DickImg} />
-            <img className='dick dick2' src={DickImg} />
-            <img className='dick dick3' src={DickImg} />
-            <img className='dick dick4' src={DickImg} />
-            <img className='dick dick5' src={DickImg} />
-            <img className='dick dick6' src={DickImg} />
-            <img className='dick dick7' src={DickImg} />
-            <MenDefault/>
+            <img className='dick' src={DickImg} />
+            <MenDefault move={coord} />
         </div>
     )
 }

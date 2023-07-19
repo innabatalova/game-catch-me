@@ -44,55 +44,71 @@
 
 .dick{
     position: absolute;
-}
-
-.dick1{
-    position: absolute;
     top: 5%;
     left: 10%;
 }
 
-.dick2{
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    transform: rotate(45deg);
+img.dick {
+    animation: 2.5s linear 0s normal none infinite running curcle;
 }
 
-.dick3{
-    position: absolute;
-    top: 15%;
-    left: 30%;
-    transform: rotate(90deg);
+@keyframes curcle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.dick4{
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    transform: rotate(135deg);
-}
+// .dick1{
+//     position: absolute;
+//     top: 5%;
+//     left: 10%;
+// }
 
-.dick5{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: rotate(225deg);
-}
+// .dick2{
+//     position: absolute;
+//     top: 10%;
+//     left: 20%;
+//     transform: rotate(45deg);
+// }
 
-.dick6{
-    position: absolute;
-    top: 30%;
-    left: 60%;
-    transform: rotate(270deg);
-}
+// .dick3{
+//     position: absolute;
+//     top: 15%;
+//     left: 30%;
+//     transform: rotate(90deg);
+// }
 
-.dick7{
-    position: absolute;
-    top: 35%;
-    left: 70%;
-    transform: rotate(315deg);
-}
+// .dick4{
+//     position: absolute;
+//     top: 20%;
+//     left: 40%;
+//     transform: rotate(135deg);
+// }
+
+// .dick5{
+//     position: absolute;
+//     top: 25%;
+//     left: 50%;
+//     transform: rotate(225deg);
+// }
+
+// .dick6{
+//     position: absolute;
+//     top: 30%;
+//     left: 60%;
+//     transform: rotate(270deg);
+// }
+
+// .dick7{
+//     position: absolute;
+//     top: 35%;
+//     left: 70%;
+//     transform: rotate(315deg);
+// }
 
 .men{
     position: absolute;
