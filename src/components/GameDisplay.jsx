@@ -14,13 +14,13 @@ const GameDisplay = () => {
     useEffect(() => {
         const onKeypress = (e) => {
             if (e.keyCode == 97) {
-                let newCoord = (coord.slice(0, -1) - 1) + '%'
+                let newCoord = (coord.slice(0, -1) - 2) + '%'
                 if (newCoord <= '15%') {
                     setCoord('15%')
                 } else { setCoord(newCoord) }
             }
             if (e.keyCode == 100) {
-                let newCoord = (parseInt(coord.slice(0, -1)) + 1) + '%'
+                let newCoord = (parseInt(coord.slice(0, -1)) + 2) + '%'
                 setCoord(newCoord)
                 if (newCoord >= '75%') {
                     setCoord('75%')

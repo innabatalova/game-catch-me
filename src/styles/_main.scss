@@ -11,130 +11,287 @@
     overflow: hidden;
 }
 
-.game{
+.game {
     height: 100%;
     text-align: center;
 }
 
-.tube{
+.tube {
     position: absolute;
 
-    &__top-left{
+    &__top-left {
         top: 10%;
         left: 0;
     }
 
-    &__bottom-left{
+    &__bottom-left {
         top: 30%;
         left: -5%;
     }
 
-    &__top-right{
+    &__top-right {
         top: 10%;
         right: 0;
         transform: rotate(180deg);
     }
 
-    &__bottom-right{
+    &__bottom-right {
         top: 30%;
         right: -5%;
         transform: rotate(180deg);
     }
 }
 
-.dick{
+.dick {
     position: absolute;
-    top: 5%;
-    left: 10%;
 }
 
 img.dick {
-    animation: 2.5s linear 0s normal none infinite running curcle;
+    animation: 5s linear 0s normal none infinite running bottomRightOut;
 }
 
-@keyframes curcle {
+@keyframes topLeftOut {
     0% {
+        top: 8%;
+        left: 12%;
         transform: rotate(0deg);
     }
 
+    10% {
+        top: 10%;
+        left: 20%;
+    }
+
+    20% {
+        top: 15%;
+        left: 28%;
+    }
+
+    30% {
+        top: 22%;
+        left: 35%;
+    }
+
+    40% {
+        top: 30%;
+        left: 40%;
+    }
+
+    50% {
+        top: 40%;
+        left: 46%;
+    }
+
+    60% {
+        top: 50%;
+        left: 53%;
+    }
+
+    70% {
+        top: 60%;
+        left: 56%;
+    }
+
+    80% {
+        top: 70%;
+        left: 58%;
+    }
+
+    90% {
+        top: 80%;
+        left: 58%;
+    }
+
     100% {
+        top: 90%;
+        left: 55%;
         transform: rotate(360deg);
     }
 }
 
-// .dick1{
-//     position: absolute;
-//     top: 5%;
-//     left: 10%;
-// }
+@keyframes topRightOut {
+    0% {
+        top: 8%;
+        right: 12%;
+        transform: rotate(0deg);
+    }
 
-// .dick2{
-//     position: absolute;
-//     top: 10%;
-//     left: 20%;
-//     transform: rotate(45deg);
-// }
+    10% {
+        top: 10%;
+        right: 20%;
+    }
 
-// .dick3{
-//     position: absolute;
-//     top: 15%;
-//     left: 30%;
-//     transform: rotate(90deg);
-// }
+    20% {
+        top: 15%;
+        right: 28%;
+    }
 
-// .dick4{
-//     position: absolute;
-//     top: 20%;
-//     left: 40%;
-//     transform: rotate(135deg);
-// }
+    30% {
+        top: 22%;
+        right: 35%;
+    }
 
-// .dick5{
-//     position: absolute;
-//     top: 25%;
-//     left: 50%;
-//     transform: rotate(225deg);
-// }
+    40% {
+        top: 30%;
+        right: 40%;
+    }
 
-// .dick6{
-//     position: absolute;
-//     top: 30%;
-//     left: 60%;
-//     transform: rotate(270deg);
-// }
+    50% {
+        top: 40%;
+        right: 46%;
+    }
 
-// .dick7{
-//     position: absolute;
-//     top: 35%;
-//     left: 70%;
-//     transform: rotate(315deg);
-// }
+    60% {
+        top: 50%;
+        right: 53%;
+    }
 
-.men{
+    70% {
+        top: 60%;
+        right: 56%;
+    }
+
+    80% {
+        top: 70%;
+        right: 58%;
+    }
+
+    90% {
+        top: 80%;
+        right: 58%;
+    }
+
+    100% {
+        top: 90%;
+        right: 55%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bottomLeftOut {
+    0% {
+        top: 28%;
+        left: 6%;
+        transform: rotate(0deg);
+    }
+
+    20% {
+        top: 33%;
+        left: 20%;
+    }
+
+    40% {
+        top: 40%;
+        left: 30%;
+    }
+
+    60% {
+        top: 53%;
+        left: 35%;
+    }
+
+    80% {
+        top: 70%;
+        left: 38%;
+    }
+
+    100% {
+        top: 90%;
+        left: 36%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bottomRightOut {
+    0% {
+        top: 28%;
+        right: 6%;
+        transform: rotate(0deg);
+    }
+
+    20% {
+        top: 33%;
+        right: 20%;
+    }
+
+    40% {
+        top: 40%;
+        right: 30%;
+    }
+
+    60% {
+        top: 53%;
+        right: 35%;
+    }
+
+    80% {
+        top: 70%;
+        right: 38%;
+    }
+
+    100% {
+        top: 90%;
+        right: 36%;
+        transform: rotate(360deg);
+    }
+}
+
+.dick1 {
+    top: 28%;
+    left: 6%;
+}
+
+.dick2 {
+    top: 33%;
+    left: 20%;
+}
+
+.dick3 {
+    top: 40%;
+    left: 30%;
+}
+
+.dick4 {
+    top: 53%;
+    left: 35%;
+}
+
+.dick5 {
+    top: 70%;
+    left: 38%;
+}
+
+.dick6 {
+    top: 90%;
+    left: 36%;
+}
+
+
+.men {
     position: absolute;
     bottom: 0;
     left: 40%;
     width: 160px;
     height: 270px;
 
-    &__body{
+    &__body {
         position: absolute;
         bottom: 0;
         left: 0;
         z-index: 2;
     }
 
-    &__face{
+    &__face {
         position: absolute;
         top: 0;
         left: 32px;
     }
 }
 
-.start{
+.start {
     text-align: center;
 }
 
-.over{
+.over {
     text-align: center;
 }
