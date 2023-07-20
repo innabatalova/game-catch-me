@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 
 import Tube from './Tube'
 import MenDefault from './MenDefault'
@@ -20,18 +21,22 @@ setInterval(() => {
     setTimeout(() => {
         let test = game.getCollision()
         const dick = document.querySelector('.dick')
-        console.log();
-        if ( (!test) && (dick !== null)) { 
+        console.log(test, dick);
+        if ( (test == false) && (dick !== null)) { 
             const count = document.querySelector('.count')
             let countValue = parseInt(count.outerText)
-            localStorage.setItem('count', countValue);
-            window.location.href = 'over' }
+            localStorage.setItem('count', countValue)
+            const overButton = document.querySelector('.over-button')
+            overButton.style.display = 'flex'
+         }
         else { return }
-    }, 4990)
+    }, 4700)
 }, 5000)
 clearInterval()
 
 const GameDisplay = () => {
+
+    const navigate = useNavigate();
 
     const [coord, setCoord] = useState('40%')
 
@@ -66,6 +71,7 @@ const GameDisplay = () => {
             <Tube classTubeProps='bottom-left' />
             <Tube classTubeProps='bottom-right' />
             <MenDefault move={coord} />
+            <Button className='over-button' variant="contained" onClick={() => navigate('/over', { replace: false })} sx={{  display: 'none', width: '50vw', height: '50vh', zIndex: '99', margin: 'auto' }}>Game over...</Button>
         </div>)
 }
 
