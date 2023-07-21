@@ -17,7 +17,7 @@ setInterval(() => {
             let countValue = parseInt(count.outerText) + 10
             count.innerText = countValue
         } else { return }
-    }, 3500)
+    }, 1500)
     setTimeout(() => {
         let test = game.getCollision()
         const dick = document.querySelector('.dick')
@@ -28,10 +28,10 @@ setInterval(() => {
             localStorage.setItem('count', countValue)
             const overButton = document.querySelector('.over-button')
             overButton.style.display = 'flex'
-         }
+        }
         else { return }
-    }, 4700)
-}, 5000)
+    }, 2700)
+}, 3000)
 clearInterval()
 
 const GameDisplay = () => {

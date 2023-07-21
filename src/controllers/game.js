@@ -22,11 +22,6 @@ class Game {
         }, 0)
     }
 
-    removeArrayImg() {
-        let elem = document.querySelector(".dick");
-        elem.remove()
-    }
-
     getCollision() {
         const dick = document.querySelector('.dick')
         const men = document.querySelector('.men')
